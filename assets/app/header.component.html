@@ -1,0 +1,32 @@
+<header>
+  <nav class="cyan">
+    <div class="flex-container">
+      <div class="left">
+        <div class="title">
+          <a [routerLink]="['']">Praktice</a>
+        </div>
+      </div>
+      <form class="search" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="input-field">
+          <label for="search"><i class="material-icons">search</i></label>
+          <input
+              ngModel
+              id="search"
+              type="text"
+              name="search"
+              required>
+        </div>
+      </form>
+      <div class="dash" routerLinkActive="active">
+        <a [routerLink]="['practices']">Dashboard</a>
+      </div>
+      <div class="profile" routerLinkActive="profile">
+        <a [routerLink]="userIdRoute">Profile</a>
+      </div>
+      <!-- Add account dropdown here  -->
+      <div class="acc" routerLinkActive="active" (click)="onLogout()">
+        <a>Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>

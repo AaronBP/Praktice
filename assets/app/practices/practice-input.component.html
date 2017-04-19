@@ -1,0 +1,27 @@
+<div class="col s12">
+  <h5 class="cyan-text">Post a Practice</h5>
+  <div class="card">
+    <div class="form card-content">
+      <form class="post-practice" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="input-field col s12">
+          <label for="post">Post</label>
+          <textarea
+            class="materialize-textarea"
+            type="text"
+            id="post"
+            [ngModel]="practice?.post"
+            required
+            name="post">
+          </textarea>
+        </div>
+        <button class="white btn waves-effect waves-light" type="button" name="button" (click)="onClear(f)">
+          <span class="blue-grey-text text-darken-4">Clear</span>
+        </button>
+        <button class="cyan btn waves-effect waves-light" type="submit" name="button">
+          Post
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

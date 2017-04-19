@@ -1,0 +1,329 @@
+body{
+  margin: 0px;
+}
+
+input {
+  margin: 0px
+}
+
+/*--------------Spinner-------------*/
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  background: #eee;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  margin: -50px 0 0 -50px;
+}
+.spinner:after, .spinner:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-sizing: initial;
+}
+
+.spinner-1:after {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border: 4px solid transparent;
+  border-top-color: orangered;
+  border-bottom-color: orangered;
+  animation: spinny 1s linear infinite;
+}
+
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/*--------------Nav Bar-------------*/
+
+nav {
+  height: 51px;
+  font-size: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.flex-container {
+    width: 100%;
+    height: 52px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  flex-grow: 1;
+}
+
+nav div.active{
+  border-bottom: 2px solid white;
+  line-height: normal;
+  height: 98%;
+  padding: 17px 0;
+}
+
+.flex-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.left div {
+  margin: 0px 10px
+}
+
+.title {
+  font-size: 20px;
+}
+
+nav .input-field input[type=text]:focus,
+nav .input-field input[type=text].ng-valid,
+nav .input-field input[type=text].ng-invalid {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+nav .input-field label i {
+  color: white;
+}
+
+nav .input-field label {
+  left: 0px;
+  top: -2px;
+}
+
+nav .search {
+  position: relative;
+  line-height: 52px;
+  text-align: left;
+}
+
+nav .search div {
+  width: 100%;
+}
+
+nav .search #search {
+  padding: 0;
+}
+
+nav .input-field label.active{
+  top: 75px!important;
+  left: -25px!important;
+}
+
+/*---------------Landing Page--------------*/
+
+#full-screen-landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/landing-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#full-screen-landing-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 70px;
+}
+
+#full-screen-landing .form-container{
+  width: 30%;
+  float: right;
+  margin-top: 50px;
+}
+
+/* label color */
+.auth-form .input-field label {
+  color: #bdbdbd;
+}
+/* label focus color */
+.auth-form .input-field input[type=text]:focus + label {
+  color: #00bcd4;
+}
+/* label underline focus color */
+.auth-form .input-field input[type=text]:focus {
+  border-bottom: 1px solid #00bcd4;
+  box-shadow: 0 1px 0 0 #00bcd4;
+}
+
+.auth-form input[type=text]:focus,
+.auth-form input[type=password]:focus,
+.auth-form input[type=email]:focus,
+.auth-form input[type=url]:focus,
+.auth-form input[type=time]:focus,
+.auth-form input[type=date]:focus,
+.auth-form input[type=datetime]:focus,
+.auth-form input[type=datetime-local]:focus,
+.auth-form input[type=tel]:focus,
+.auth-form input[type=number]:focus,
+.auth-form input[type=search]:focus,
+.auth-form textarea.materialize-textarea:focus {
+  border-bottom: 1px solid #00bcd4;
+  box-shadow: 0 1px 0 0 #00bcd4;
+}
+
+.auth-form input[type=text]:focus + label,
+.auth-form input[type=password]:focus + label,
+.auth-form input[type=email]:focus + label,
+.auth-form input[type=url]:focus + label,
+.auth-form input[type=time]:focus + label,
+.auth-form input[type=date]:focus + label,
+.auth-form input[type=datetime]:focus + label,
+.auth-form input[type=datetime-local]:focus + label,
+.auth-form input[type=tel]:focus + label,
+.auth-form input[type=number]:focus + label,
+.auth-form input[type=search]:focus + label,
+.auth-form textarea.materialize-textarea:focus + label {
+  color: #00bcd4
+}
+
+.auth-form input:not([type]),
+.auth-form input[type=text],
+.auth-form input[type=password],
+.auth-form input[type=email],
+.auth-form input[type=url],
+.auth-form input[type=time],
+.auth-form input[type=date],
+.auth-form input[type=datetime],
+.auth-form input[type=datetime-local],
+.auth-form input[type=tel],
+.auth-form input[type=number],
+.auth-form input[type=search],
+.auth-form textarea.materialize-textarea {
+  border-bottom: 1px solid #bdbdbd;
+  box-shadow: 0 1px 0 0 #bdbdbd;
+}
+
+.auth-form .card-title {
+  margin-bottom: 30px;
+}
+
+.auth-form .btn {
+  margin-top: 30px;
+}
+
+
+/*--------------Practices-------------*/
+
+.likes {
+  padding-left: 10px;
+}
+
+/*----------------User-Profile--------------*/
+.profile-detail .banner {
+  background: rgba(0,0,0,0.3);
+  height: 200px;
+  position: relative;
+  text-align: center;
+}
+
+.profile-detail .profile-image {
+  display: inline-block;
+  border-radius: 100px;
+  border: 4px solid #fafafa;
+  width: 156px;
+  height: 156px;
+  box-sizing: border-box;
+  margin-top: 110px;
+}
+
+.profile-detail .profile-image img {
+  width: 150px;
+  position: relative;
+  top: -1px;
+  left: -1px;
+  border-radius: 100px;
+}
+
+.profile-detail .user-info {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.profile-detail .info-username {
+  font-weight: 300;
+  margin: 0
+}
+
+.profile-detail .info-email {
+  padding-top: 5px;
+}
+
+.profile-detail .profile-follow {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+.profile-detail .profile-content {
+  margin-top: 40px;
+}
+
+.profile-detail .content-title h4 {
+  font-weight: 300;
+}
+/*-----------------Search---------------*/
+.search-list {
+  margin-top: 40px;
+}
+
+/*------------------General-----------------*/
+
+html {
+  background-color: #fafafa;
+}
+
+.float-right {
+  float: right;
+}
+
+app-practice-input .form h5 {
+  padding: 0px 0.75rem;
+  margin: .82rem 0 -0.8rem 0;
+}
+
+.input-field input[type=text]:focus,
+.input-field textarea[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field textarea[type=email]:focus {
+  border-bottom: 1px solid #00bcd4;
+}
+
+.input-field input.ng-touched.ng-valid ,
+.input-field textarea.ng-touched.ng-valid {
+  border-bottom: 1px solid #4CAF50;
+}
+
+.input-field input.ng-touched.ng-invalid ,
+.input-field textarea.ng-touched.ng-invalid {
+  border-bottom: 1px solid #ee6e73;
+}

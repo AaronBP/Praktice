@@ -1,0 +1,25 @@
+<div class="form-container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="card auth-form">
+      <div class="card-content">
+        <span class="card-title cyan-text">Sign up</span>
+        <div class="input-field">
+          <input type="text" id="username" formControlName="username">
+          <label for="username">Username</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="email" formControlName="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" formControlName="password">
+          <label for="password">Password</label>
+        </div>
+        <button class="btn waves-effect waves-light cyan" type="submit">Get started</button>
+      </div>
+      <div class="card-action">
+        <a [routerLink]="['/auth/signin']" class="text-deep-orange">Existing user?</a>
+      </div>
+    </div>
+  </form>
+</div>

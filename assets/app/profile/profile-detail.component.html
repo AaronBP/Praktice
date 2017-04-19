@@ -1,0 +1,33 @@
+<div class="profile-detail">
+  <div class="banner">
+    <div class="profile-image">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="Placeholder profile image">
+    </div>
+    <button
+      class="profile-follow waves-effect waves-light btn cyan"
+      (click)="follow()"
+      *ngIf="eligibleToFollow()">Follow
+      </button>
+    <button
+      class="profile-follow waves-effect waves-light btn cyan"
+      disabled
+      *ngIf="currentFollow">Following</button>
+  </div>
+  <div class="user-info">
+    <h4 class="info-username">
+      {{ user?.username }}
+    </h4>
+    <div class="info-email">
+      <a  href="mailto:{{user?.email}}">{{ user?.email }}</a>
+    </div>
+  </div>
+  <div class="profile-content">
+    <div class="content-title">
+      <h4>Recent posts</h4>
+    </div>
+    <div *ngIf="!hasPosts" class="no-posts">
+      No posts to display
+    </div>
+    <app-practice [practice]="practice" *ngFor="let practice of userPractices"></app-practice>
+  </div>
+</div>

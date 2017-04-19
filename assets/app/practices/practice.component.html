@@ -1,0 +1,25 @@
+ <div class="col s12 ">
+   <div class="card white">
+     <div class="card-content grey-text text-darken-3">
+       <span class="card-title">
+         <a [routerLink]="['/profile/' + practice.authorId ]">{{practice?.author}}</a>
+       </span>
+      <div class="row">
+        <div class="col s12">
+          {{practice?.post}}
+        </div>
+     </div>
+     </div>
+     <div class="card-action">
+       <a *ngIf="!unableToLike(practice)" class="button" (click)="onLike()">
+         Like
+       </a>
+       <span *ngIf="practice?.likeAuthor.length == 1" class="likes">
+         {{ practice?.likeAuthor.length }} like
+       </span>
+       <span *ngIf="practice?.likeAuthor.length == 0 || practice?.likeAuthor.length > 1" class="likes">
+         {{ practice?.likeAuthor.length }} likes
+       </span>
+     </div>
+   </div>
+ </div>
